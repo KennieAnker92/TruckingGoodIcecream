@@ -1,6 +1,6 @@
 namespace TruckingGoodIcecream.Core.Interfaces;
 
-public interface ITemeratureSensor
+public interface ITemperatureSensor
 {
-    
+    double GetAmbientTemperatureCelsius();
 }
