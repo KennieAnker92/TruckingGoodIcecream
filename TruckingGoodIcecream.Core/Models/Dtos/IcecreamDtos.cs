@@ -1,0 +1,1 @@
+namespace TruckingGoodIcecream.Core.Models.Dtos;

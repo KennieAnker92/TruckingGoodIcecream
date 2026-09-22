@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="TruckingGoodIcecream.Core/TruckingGoodIcecream.Core.csproj" />
+  <Project Path="TruckingGoodIcecream.UnitTests/TruckingGoodIcecream.UnitTests.csproj" />
+</Solution>
