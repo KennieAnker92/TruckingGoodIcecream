@@ -27,10 +27,10 @@ public class IcecreamService
         _tempSensor = tempSensor;
     }
 
-    // --- FULL DEMOS (01 & 02) ---
+    // --- Exercises 1 & 2 function as examples ---
 
     /*
-     * Exercise 01: Create Flavor
+     * Example exercise 1: Create Flavor
      * Explanation: When adding a new flavor to the menu, we must stamp it with the current timestamp.
      * We use _clock.UtcNow so that in tests, the creation date is 100% deterministic.
      */
@@ -51,7 +51,7 @@ public class IcecreamService
     }
 
     /*
-     * Exercise 02: Calculate Happy Hour Price
+     * Example exercise 2: Calculate Happy Hour Price
      * Explanation: Between 2 PM (14) and 4 PM (16), all scoops are 50% off. 
      * Reading _clock.UtcNow.Hour allows unit tests to freeze time at different hours.
      */
@@ -62,10 +62,10 @@ public class IcecreamService
         return isHappyHour ? basePrice * 0.50m : basePrice;
     }
 
-    // --- PARTIAL LOGIC EXERCISES (03 - 10) ---
+    // --- These exercises are partially complete. ---
 
     /*
-     * Exercise 03: Mystery Coupon
+     * Exercise 3: Mystery Coupon
      * Explanation: Generate a mystery discount code for customers. The discount percentage 
      * is randomly chosen between 5% and 25% using _rng.Next().
      */
@@ -77,7 +77,7 @@ public class IcecreamService
     }
 
     /*
-     * Exercise 04: Sell Scoops
+     * Exercise 4: Sell Scoops
      * Explanation: When scoops are sold, update the database by subtracting scoopsSold 
      * from the current inventory.
      */
@@ -91,7 +91,7 @@ public class IcecreamService
     }
 
     /*
-     * Exercise 05: Get Flavors Added After Threshold
+     * Exercise 5: Get Flavors Added After Threshold
      * Explanation: Retrieve active ice cream flavors added on or after a specified cutoff date.
      */
     public List<FlavorSummaryDto> GetFlavorsAddedAfter(DateTime threshold)
@@ -104,7 +104,7 @@ public class IcecreamService
     }
 
     /*
-     * Exercise 06: Retire Seasonal Flavors
+     * Exercise 6: Retire Seasonal Flavors
      * Explanation: At the end of a season, deactivate all flavors created before a cutoff date.
      */
     public int RetireSeasonalFlavors(DateTime cutoffDate)
@@ -118,7 +118,7 @@ public class IcecreamService
     }
 
     /*
-     * Exercise 07: Purchase Ice cream
+     * Exercise 7: Purchase Ice cream
      * Explanation: Calculate total price and return a structured DTO receipt stamped with _clock.UtcNow.
      */
     public IcecreamReceiptDto PurchaseIcecream(int flavorId, int scoopsPurchased)
@@ -131,7 +131,7 @@ public class IcecreamService
     }
 
     /*
-     * Exercise 08: Select Mystery Flavor
+     * Exercise 8: Select Mystery Flavor
      * Explanation: Pick a random active flavor from the database using _rng.Next().
      */
     public int SelectMysteryFlavorId()
@@ -148,7 +148,7 @@ public class IcecreamService
     }
 
     /*
-     * Exercise 09: Calculate Melt Time
+     * Exercise 9: Calculate Melt Time
      * Explanation: Ice cream melts faster on hot days! Check ambient temperature via _tempSensor:
      * - >= 30.0°C: 5 minutes
      * - >= 20.0°C: 12 minutes

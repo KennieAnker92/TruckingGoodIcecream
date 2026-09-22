@@ -22,11 +22,11 @@ public class IcecreamServiceTests : IClassFixture<TestDatabaseFixture>
         _fixture = fixture;
     }
 
-    // --- FULL DEMOS (01 & 02) ---
+    // --- Example exercises ---
 
     /*
-     * Exercise 01: Create Flavor
-     * Testing Concept: Verifying that AddNewFlavor stamps AddedAtUtc directly from the clock stub.
+     * Example exercise 01: Create Flavor
+     * AddNewFlavor stamps AddedAtUtc directly from the clock stub.
      */
     [Fact]
     public void AddNewFlavor_SetsAddedAtFromClockStub()
@@ -44,8 +44,8 @@ public class IcecreamServiceTests : IClassFixture<TestDatabaseFixture>
     }
 
     /*
-     * Exercise 02: Calculate Happy Hour Price
-     * Testing Concept: Verifying discount behavior across hour boundaries using [Theory].
+     * Example exercise 02: Calculate Happy Hour Price
+     * Happy hour discount behavior across hour boundaries using [Theory].
      */
     [Theory]
     [InlineData(14, 4.00, 2.00)]
@@ -64,11 +64,11 @@ public class IcecreamServiceTests : IClassFixture<TestDatabaseFixture>
         Assert.Equal(expectedPrice, price);
     }
 
-    // --- MIXED SCAFFOLDING TESTS (03 - 10) ---
+    // --- These tests will be in a state of mixed completion (03 - 10) ---
 
     /*
      * Exercise 03: Mystery Coupon
-     * Testing Concept: Verifying coupon formatting when ControlledRandomStub returns 15.
+     * Verify coupon formatting when ControlledRandomStub returns 15.
      * Missing: Act & Assert
      */
     [Fact]
@@ -85,7 +85,7 @@ public class IcecreamServiceTests : IClassFixture<TestDatabaseFixture>
 
     /*
      * Exercise 04: Sell Scoops
-     * Testing Concept: Verifying inventory subtraction in SQLite database.
+     * Verify inventory subtraction in SQLite database.
      * Missing: Arrange (Needs flavor inserted into DB)
      */
     [Fact]
@@ -103,7 +103,7 @@ public class IcecreamServiceTests : IClassFixture<TestDatabaseFixture>
 
     /*
      * Exercise 05: Get Flavors Added After Threshold
-     * Testing Concept: Filtering entities by timestamp using frozen clock stubs.
+     * Filtering entities by timestamp using frozen clock stubs.
      * Missing: Assert
      */
     [Fact]
@@ -127,7 +127,7 @@ public class IcecreamServiceTests : IClassFixture<TestDatabaseFixture>
 
     /*
      * Exercise 06: Retire Seasonal Flavors
-     * Testing Concept: Bulk update verification.
+     * Bulk update verification.
      * Missing: Act
      */
     [Fact]
@@ -146,7 +146,7 @@ public class IcecreamServiceTests : IClassFixture<TestDatabaseFixture>
 
     /*
      * Exercise 07: Purchase Ice cream
-     * Testing Concept: DTO mapping and receipt timestamping.
+     * DTO mapping and receipt timestamping.
      * Missing: Arrange
      */
     [Fact]
@@ -162,7 +162,7 @@ public class IcecreamServiceTests : IClassFixture<TestDatabaseFixture>
 
     /*
      * Exercise 08: Select Mystery Flavor
-     * Testing Concept: Using random index stub to pick from database.
+     * Using random index stub to pick from database.
      * Missing: Arrange (Setting up ControlledRandomStub)
      */
     [Fact]
@@ -183,7 +183,7 @@ public class IcecreamServiceTests : IClassFixture<TestDatabaseFixture>
 
     /*
      * Exercise 09: Calculate Melt Time
-     * Testing Concept: Stubbing ambient hardware temperatures.
+     * Stubbing ambient hardware temperatures.
      * Missing: Act & Assert
      */
     [Theory]
@@ -203,7 +203,7 @@ public class IcecreamServiceTests : IClassFixture<TestDatabaseFixture>
 
     /*
      * Exercise 10: Heatwave Price Adjustment
-     * Testing Concept: Discount evaluation based on temperature sensor.
+     * Discount evaluation based on temperature sensor.
      * Missing: Act
      */
     [Theory]
