@@ -73,6 +73,7 @@ public class IcecreamService
     {
         // TODO: Complete the line below using _rng.Next(5, 25)
         int percentage = 0; // REPLACE THIS
+        throw new NotImplementedException(); // Remove this line after implementing the TODO & The missing part of the unit test.
         return $"DISCOUNT-{percentage}%";
     }
 
@@ -88,6 +89,7 @@ public class IcecreamService
 
         // TODO: Subtract scoopsSold from flavor.ScoopsInStock and update the record in _db
         // _db.Update(flavor);
+        throw new NotImplementedException(); // Remove this line after implementing the TODO & The missing part of the unit test.
     }
 
     /*
@@ -97,6 +99,7 @@ public class IcecreamService
     public List<FlavorSummaryDto> GetFlavorsAddedAfter(DateTime threshold)
     {
         // TODO: Filter database records by AddedAtUtc >= threshold and IsActive == true
+        throw new NotImplementedException(); // Remove this line after implementing the TODO & The missing part of the unit test.
         return _db.GetTable<FlavorEntity>()
             .Where(f => f.IsActive /* ADD CONDITION HERE */)
             .Select(f => new FlavorSummaryDto(f.Id, f.Name, f.BasePrice, f.ScoopsInStock, f.AddedAtUtc))
@@ -114,6 +117,7 @@ public class IcecreamService
             .ToList();
 
         // TODO: Loop through staleFlavors, set IsActive = false, call _db.Update(f), and return count retired.
+        throw new NotImplementedException(); // Remove this line after implementing the TODO & The missing part of the unit test.
         return 0;
     }
 
@@ -127,6 +131,7 @@ public class IcecreamService
         decimal totalCost = flavor.BasePrice * scoopsPurchased;
 
         // TODO: Return an IcecreamReceiptDto stamped with _clock.UtcNow
+        throw new NotImplementedException(); // Remove this line after implementing the TODO & The missing part of the unit test.
         return new IcecreamReceiptDto(flavor.Id, flavor.Name, scoopsPurchased, totalCost, DateTime.MinValue);
     }
 
@@ -144,6 +149,7 @@ public class IcecreamService
         if (!activeIds.Any()) return 0;
 
         // TODO: Use _rng.Next(0, activeIds.Count) to select an index and return activeIds[selectedIndex]
+        throw new NotImplementedException(); // Remove this line after implementing the TODO & The missing part of the unit test.
         return 0;
     }
 
@@ -157,6 +163,7 @@ public class IcecreamService
     public int CalculateMeltTimeMinutes()
     {
         double temp = _tempSensor.GetAmbientTemperatureCelsius();
+        throw new NotImplementedException(); // Remove this line after implementing the TODO & The missing part of the unit test.
 
         // TODO: Complete temperature threshold checks
         if (temp >= 30.0) return 5;
@@ -171,6 +178,7 @@ public class IcecreamService
     {
         double temp = _tempSensor.GetAmbientTemperatureCelsius();
 
+        throw new NotImplementedException(); // Remove this line after implementing the TODO & The missing part of the unit test.
         // TODO: If temp > 32.0, return basePrice * 0.80m, else return basePrice
         return basePrice;
     }
